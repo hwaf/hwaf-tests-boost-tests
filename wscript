@@ -17,7 +17,7 @@ def options(ctx):
     
 def configure(ctx):
     ctx.load('find_boost')
-    ctx.find_boost()
+    ctx.find_boost(lib='filesystem system')
     ctx.start_msg("was Boost found ?")
     ctx.end_msg(ctx.env.HWAF_FOUND_BOOST)
     if ctx.env.HWAF_FOUND_BOOST:
